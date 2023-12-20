@@ -1,10 +1,35 @@
-Here are the code/data files and their explanations:
+# Code and Data Files Overview
 
-Training_Data_Generation: Used OpenAI's API to generate a data set, which outputs an arbitrary price change, corresponding 10 tweets, and a final summary
-train_data: Resulting synthetic data set
-train_data_eval: Checked the consistency scores between the given price changes & tweets and the resulting summary. Since the labels were not human-generated, this step was needed to ensure the quality of the training data.
-twitter-data-bitcoin: It is the real-world dataset about Bitcoin, which I scraped (some filters I applied in my scraping: (English, over 10k followers)
-Tweet_Clustering: Used to classify tweets into groups for inference purposes. 
-Llama2_finetune: Used huggingface's autotrain module to finetune the Llama2-7b model by quantization and low-rank adaptation.
-Llama-inference_yusufefe: Used for testing model outputs
+This repository contains various code and data files used in the project. Below is a detailed explanation of each file:
+
+## Code Files
+
+- **Training_Data_Generation**: 
+  - Description: Utilizes OpenAI's API to generate a synthetic dataset. This dataset includes arbitrary price changes, corresponding sets of 10 tweets, and a summary for each set.
+  
+- **Tweet_Clustering**: 
+  - Description: Classifies tweets into different groups for inference purposes.
+
+- **Llama2_finetune**: 
+  - Description: Employs Huggingface's AutoTrain module to finetune the Llama2-7b model using techniques like quantization and low-rank adaptation.
+
+- **Llama-inference_yusufefe**: 
+  - Description: Used for testing the outputs of the finetuned model.
+
+## Data Files
+
+- **train_data**: 
+  - Description: The synthetic dataset generated using the Training_Data_Generation script.
+
+- **train_data_eval**: 
+  - Description: Evaluates the consistency between the given price changes & tweets and the resulting summary. Essential for ensuring the quality of the training data, given that labels were not human-generated.
+
+- **twitter-data-bitcoin**: 
+  - Description: A real-world dataset about Bitcoin, scraped with specific filters (English language, over 10k followers).
+
+## Additional Notes
+
+- The synthetic dataset and evaluation steps are crucial for training robust models as they provide a controlled environment to test and improve the model's performance.
+- The real-world Bitcoin dataset adds practical relevance and helps in fine-tuning the model to understand and interpret real-world data effectively.
+
 
