@@ -7,6 +7,9 @@ This repository contains various code and data files used in the project. Below 
 - **Training_Data_Generation**: 
   - Description: Utilizes OpenAI's API to generate a synthetic dataset. This dataset includes arbitrary price changes, corresponding sets of 10 tweets, and a summary for each set.
   
+- **train_data_eval**: 
+  - Description: Evaluates the consistency between the given price changes & tweets and the resulting summary. Essential for ensuring the quality of the training data, given that labels were not human-generated.
+  
 - **Tweet_Clustering**: 
   - Description: Classifies tweets into different groups for inference purposes.
 
@@ -20,9 +23,6 @@ This repository contains various code and data files used in the project. Below 
 
 - **train_data**: 
   - Description: The synthetic dataset generated using the Training_Data_Generation script.
-
-- **train_data_eval**: 
-  - Description: Evaluates the consistency between the given price changes & tweets and the resulting summary. Essential for ensuring the quality of the training data, given that labels were not human-generated.
 
 - **twitter-data-bitcoin**: 
   - Description: A real-world dataset about Bitcoin, scraped with specific filters (English language, over 10k followers).
